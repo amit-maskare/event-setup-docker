@@ -9,7 +9,7 @@ A NestJS-based backend application for managing events, with PostgreSQL as the d
 - [Environment Variables](#environment-variables)
 - [Running the Application](#running-the-application)
 - [Running with Docker](#building-the-application)
-- [Start Working] (#start-working)
+- [Start Working](#start-working)
 
 ---
 
