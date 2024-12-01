@@ -55,10 +55,10 @@ Rename env to .env & change DATABASE_URL
 
 ## Running with Docker
  - docker compose up --build
- - docker exec -it $Container-Id sh
+ - docker exec -it [container-id](#) sh
  - npx prisma db push
 
 ---
 
-## Start Working
+## Accessing the Application
  - Open localhost:3000
