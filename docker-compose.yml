@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # NestJS Application
+  nestjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Map port 3000 to the host machine
+    environment:
+      - DATABASE_URL=postgresql://postgres:pAssW0rd!!@postgres:5432/event_mgmt?schema=public
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    volumes:
+      - .:/app  # Mount the current directory as a volume for live updates
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pAssW0rd!!
+      POSTGRES_DB: event_mgmt
+    ports:
+      - "5432:5432"  # Expose PostgreSQL port
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persist data
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
