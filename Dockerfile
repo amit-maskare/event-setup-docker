@@ -1,26 +1,29 @@
-# Step 1: Use official Node.js image as base image
+# Use the official Node.js image as the base image
 FROM node:18-alpine
 
-# Step 2: Set working directory inside the container
-WORKDIR /app
+# Set the working directory inside the container
+WORKDIR /usr/src/app
 
-# Step 3: Install global dependencies (Nest CLI)
+# Install global dependencies (Nest CLI)
 RUN npm install -g @nestjs/cli
 
-# Step 4: Copy package.json and package-lock.json
+# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-# Step 5: Install application dependencies
+# Install the application dependencies
 RUN npm install
 
-# Step 6: Copy the entire application
+# Copy the rest of the application files
 COPY . .
 
-# Step 7: Build the NestJS application
+# Generate Prisma Client
+RUN npx prisma generate
+
+# Build the NestJS application
 RUN npm run build
 
-# Step 8: Expose port for the application
+# Expose the application port
 EXPOSE 3000
 
-# Step 9: Start the application
-CMD ["npm", "run", "start:prod"]
+# Command to run the application
+CMD ["node", "dist/main"]
