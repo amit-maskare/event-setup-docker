@@ -1,0 +1,2 @@
+DATABASE_URL=postgresql://postgres:pAssW0rd!!@postgres:5432/mydb?event_mgmt=public
+PORT=3000

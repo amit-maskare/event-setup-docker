@@ -9,7 +9,7 @@ A NestJS-based backend application for managing events, with PostgreSQL as the d
 - [Environment Variables](#environment-variables)
 - [Running the Application](#running-the-application)
 - [Running with Docker](#running-with-docker)
-- [Start Working](#start-working)
+- [Accessing the Application](#accessing-the-application)
 
 ---
 
@@ -55,7 +55,7 @@ Rename env to .env & change DATABASE_URL
 
 ## Running with Docker
  - docker compose up --build
- - docker exec -it <Container-Id> sh
+ - docker exec -it $Container-Id sh
  - npx prisma db push
 
 ---
