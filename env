@@ -1,2 +1,2 @@
-DATABASE_URL=postgresql://postgres:pAssW0rd!!@postgres:5432/mydb?event_mgmt=public
+DATABASE_URL=postgresql://postgres:pAssW0rd!!@postgres:5432/event_mgmt?schema=public
 PORT=3000
