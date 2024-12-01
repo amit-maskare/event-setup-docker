@@ -8,9 +8,8 @@ A NestJS-based backend application for managing events, with PostgreSQL as the d
 - [Getting Started](#getting-started)
 - [Environment Variables](#environment-variables)
 - [Running the Application](#running-the-application)
-- [Building the Application](#building-the-application)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
+- [Running with Docker](#building-the-application)
+- [Start Working] (#start-working)
 
 ---
 
@@ -37,16 +36,20 @@ Ensure the following tools are installed on your system:
 ```bash
  - git clone https://github.com/your-repo/event-setup-docker.git
  - cd event-setup-docker
+
+## Environment Variables
+ - Rename env to .env & change DATABASE_URL
+
+## Running the Application
  - npm i
- - Rename env to .env & change DB url
  - npm run start:dev
 
 
-### 2. With Docker Commands
+## Running with Docker
  - docker compose up --build
  - docker exec -it <Container-Id> sh
  - npx prisma db push
 
 
-### 3. Running the App
- - Open localhost:3000 and start work
+## Start Working
+ - Open localhost:3000
