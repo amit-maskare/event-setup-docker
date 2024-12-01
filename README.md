@@ -36,11 +36,14 @@ Ensure the following tools are installed on your system:
 ```bash
  - git clone https://github.com/amit-maskare/event-setup-docker.git
  - cd event-setup-docker
+```
 
 ---
 
 ## Environment Variables
 Rename env to .env & change DATABASE_URL
+
+---
 
 ## Running the Application
  - npm i
@@ -48,12 +51,14 @@ Rename env to .env & change DATABASE_URL
  - npx prisma db push
  - npm run start:dev
 
+---
 
 ## Running with Docker
  - docker compose up --build
  - docker exec -it <Container-Id> sh
  - npx prisma db push
 
+---
 
 ## Start Working
  - Open localhost:3000
